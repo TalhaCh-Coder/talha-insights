@@ -37,7 +37,7 @@ function ProjectsSection() {
       },
       {
          id: 2,
-         title: "Task Management App",
+         title: "Task Management Systen",
          description:
             "Architected a productivity platform with real-time collaboration features that increased team efficiency by 40% through streamlined workflows.",
          image: "/project2.jpg",
@@ -77,7 +77,7 @@ function ProjectsSection() {
       },
       {
          id: 6,
-         title: "Content Management App",
+         title: "Content Management System",
          description:
             "Engineered a robust CMS with rich text editing and SEO optimization that reduced content publishing time by 60% for editorial teams.",
          image: "/project6.jpg",
@@ -92,7 +92,7 @@ function ProjectsSection() {
          <div className="px-4 sm:px-6 lg:px-8">
             {/* Header */}
             <div className="text-center mb-12 md:mb-16" data-aos="fade-up">
-               <div className="flex items-center justify-center pb-4 gap-4 "> 
+               <div className="flex items-center justify-center pb-4 gap-4 ">
                   <div className="hidden lg:block bg-[#2C3E50] h-[3px] rounded-full w-20"></div>
                   <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#2C3E50]">
                      Solution <span className="text-[#3498DB]">Portfolio</span>
