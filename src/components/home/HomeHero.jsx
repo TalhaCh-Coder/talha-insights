@@ -25,7 +25,7 @@ function HomeHero() {
             <div className="order-2 lg:order-1 items-center flex justify-center lg:justify-end items-center lg:pr-6">
                <div className="w-[90%] max-w-md py-8 px-4 md:px-0">
                   <h1
-                     className="text-[2.5rem] md:text-[3rem] leading-[3rem] md:leading-[3.5rem] text-center lg:text-left mb-6 md:mb-8 font-bold"
+                     className="text-[2.5rem] text-white md:text-[3rem] leading-[3rem] md:leading-[3.5rem] text-center lg:text-left mb-6 md:mb-8 font-bold"
                      data-aos="fade-right"
                      data-aos-delay="200"
                   >
@@ -61,7 +61,7 @@ function HomeHero() {
                         }
                         className="bg-[#3498db] ml-0 md:ml-2 px-8 py-3 md:py-4 inline-block hover:bg-[#2980b9] transition-all duration-300 transform hover:scale-105 rounded-lg text-white font-semibold shadow-lg hover:shadow-xl"
                      >
-                        Explore My Solutions
+                        Explore My Projects
                      </button>
                   </div>
                </div>

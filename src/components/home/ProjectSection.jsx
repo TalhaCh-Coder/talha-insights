@@ -95,7 +95,7 @@ function ProjectsSection() {
                <div className="flex items-center justify-center pb-4 gap-4 ">
                   <div className="hidden lg:block bg-[#2C3E50] h-[3px] rounded-full w-20"></div>
                   <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#2C3E50]">
-                     Solution <span className="text-[#3498DB]">Portfolio</span>
+                     My <span className="text-[#3498DB]">Projects</span>
                   </h2>
                   <div className="hidden lg:block bg-[#2C3E50] h-[3px] rounded-full w-20"></div>
                </div>

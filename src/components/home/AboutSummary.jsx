@@ -53,8 +53,8 @@ function AboutSummary() {
                <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#2C3E50] mb-4 flex items-center justify-center gap-4">
                   <div className="hidden lg:block bg-[#2C3E50] h-[3px] rounded-full w-20"></div>
                   <span>
-                     Professional{" "}
-                     <span className="text-[#3498DB]">Approach</span>
+                     About{" "}
+                     <span className="text-[#3498DB]">Me</span>
                   </span>
                   <div className="hidden lg:block bg-[#2C3E50] h-[3px] rounded-full w-20"></div>
                </h2>
