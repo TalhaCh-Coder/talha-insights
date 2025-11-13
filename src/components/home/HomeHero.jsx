@@ -18,9 +18,9 @@ function HomeHero() {
    return (
       <section
          id="home"
-         className="lg:min-h-screen bg-[#1A252F] w-full flex items-center justify-center pt-30 pb-15 md:pt-30 md:pb-15 lg:pt-10 lg:pb-0"
+         className="mt-18 lg:min-h-screen bg-[#1A252F] w-full flex justify-center items-center pt-19 pb-15 md:pt-30 lg:pt-2 md:pb-15 "
       >
-         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 overflow-hidden w-[90%]">
+         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10  overflow-hidden w-[90%]">
             {/* LEFT COLUMN */}
             <div className="order-2 lg:order-1 items-center flex justify-center lg:justify-end items-center lg:pr-6">
                <div className="w-[90%] max-w-md py-8 px-4 md:px-0">

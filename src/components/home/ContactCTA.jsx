@@ -1,15 +1,18 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
    FaEnvelope,
    FaPhone,
    FaMapMarkerAlt,
    FaPaperPlane,
-   FaRocket,
    FaHandshake,
 } from "react-icons/fa";
 
 function ContactCTA() {
+   const formRef = useRef();
+   const [status, setStatus] = useState("");
+
+   // Initialize AOS animations
    useEffect(() => {
       const initAOS = async () => {
          if (typeof window !== "undefined") {
@@ -47,12 +50,48 @@ function ContactCTA() {
       },
    ];
 
+   // Handle form submission with Nodemailer
+   const handleSubmit = async (e) => {
+      e.preventDefault();
+      setStatus("Sending...");
+
+      const formData = new FormData(formRef.current);
+      const data = {
+         name: formData.get("user_name"),
+         email: formData.get("user_email"),
+         project_scope: formData.get("project_scope"),
+         project_details: formData.get("project_details"),
+      };
+
+      try {
+         const response = await fetch("/api/send-email", {
+            method: "POST",
+            headers: {
+               "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+         });
+
+         const result = await response.json();
+
+         if (result.success) {
+            setStatus("Message sent successfully!");
+            formRef.current.reset();
+         } else {
+            setStatus("Failed to send email. Try again.");
+         }
+      } catch (error) {
+         console.error("Error:", error);
+         setStatus("Failed to send email. Try again.");
+      }
+   };
+
    return (
       <section id="contact" className="bg-gray-50 py-16 md:py-20 scroll-mt-10">
          <div className="px-4 sm:px-6 lg:px-8">
             {/* Header */}
             <div className="text-center mb-12 md:mb-16" data-aos="fade-up">
-                <div className="flex items-center justify-center pb-4 gap-4 "> 
+               <div className="flex items-center justify-center pb-4 gap-4 ">
                   <div className="hidden lg:block bg-[#2C3E50] h-[3px] rounded-full w-20"></div>
                   <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#2C3E50]">
                      Start Your <span className="text-[#3498DB]">Project</span>
@@ -75,11 +114,10 @@ function ContactCTA() {
                   <p className="text-gray-600 text-lg leading-relaxed mb-8 text-center md:text-left">
                      I partner with forward-thinking businesses to architect
                      digital solutions that drive growth, enhance user
-                     experiences, and deliver measurable ROI. Let&apos;s discuss how
-                     we can bring your project to life.
+                     experiences, and deliver measurable ROI. Let&apos;s discuss
+                     how we can bring your project to life.
                   </p>
 
-                  {/* Contact Information */}
                   <div className="space-y-4">
                      {contactInfo.map((contact, index) => (
                         <a
@@ -118,7 +156,11 @@ function ContactCTA() {
                      </h3>
                   </div>
 
-                  <form className="space-y-6">
+                  <form
+                     ref={formRef}
+                     className="space-y-6"
+                     onSubmit={handleSubmit}
+                  >
                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                            <label className="block text-[#2C3E50] font-semibold mb-2">
@@ -126,8 +168,10 @@ function ContactCTA() {
                            </label>
                            <input
                               type="text"
+                              name="user_name"
                               className="text-[#2c3e50] w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#3498DB] placeholder:text-gray-400 transition-colors duration-300"
                               placeholder="Enter your name"
+                              required
                            />
                         </div>
                         <div>
@@ -136,8 +180,10 @@ function ContactCTA() {
                            </label>
                            <input
                               type="email"
+                              name="user_email"
                               className="text-[#2c3e50] w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#3498DB] placeholder:text-gray-400 transition-colors duration-300"
                               placeholder="your@company.com"
+                              required
                            />
                         </div>
                      </div>
@@ -148,8 +194,10 @@ function ContactCTA() {
                         </label>
                         <input
                            type="text"
+                           name="project_scope"
                            className="text-[#2c3e50] w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#3498DB] placeholder:text-gray-400 transition-colors duration-300"
                            placeholder="Describe your project requirements"
+                           required
                         />
                      </div>
 
@@ -158,9 +206,11 @@ function ContactCTA() {
                            Project Details
                         </label>
                         <textarea
+                           name="project_details"
                            rows="5"
                            className="text-[#2c3e50] w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#3498DB] placeholder:text-gray-400 transition-colors duration-300 resize-none"
                            placeholder="Tell me about your business goals and technical requirements..."
+                           required
                         ></textarea>
                      </div>
 
@@ -171,6 +221,18 @@ function ContactCTA() {
                         <FaPaperPlane />
                         Discuss Project
                      </button>
+
+                     <p
+                        className={`text-center mt-2 ${
+                           status.includes("Failed")
+                              ? "text-red-600"
+                              : status.includes("successfully")
+                              ? "text-green-600"
+                              : "text-blue-600"
+                        }`}
+                     >
+                        {status}
+                     </p>
                   </form>
                </div>
             </div>
