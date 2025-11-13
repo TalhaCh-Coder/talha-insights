@@ -18,7 +18,7 @@ function HomeHero() {
    return (
       <section
          id="home"
-         className="mt-18 lg:min-h-screen bg-[#1A252F] w-full flex justify-center items-center pt-19 pb-15 md:pt-30 lg:pt-2 md:pb-15 "
+         className=" lg:min-h-screen bg-[#1A252F] w-full flex justify-center items-center pt-19 pb-15 md:pt-30  md:pb-15 "
       >
          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10  overflow-hidden w-[90%]">
             {/* LEFT COLUMN */}

@@ -143,11 +143,11 @@ function NavBar() {
          </div>
 
          {/* Desktop NavBar */}
-         <nav className="hidden md:flex bg-[#2c3e50] md:px-10 py-4 fixed top-0 w-full z-60 shadow-lg">
+         <nav className="hidden md:flex bg-white md:px-10 py-4 fixed top-0 lg:top-2 w-full  lg:w-[85%] lg:inset-x-[7.5%] z-60 shadow-lg">
             <div className="w-[22%] flex items-center">
                <button
                   onClick={() => scrollToSection("home")}
-                  className="text-[1.5rem] font-bold text-white hover:text-[#3498db] transition-colors duration-300"
+                  className="text-[1.5rem] font-bold text-[#2c3e50] hover:text-[#2c3e50] transition-colors duration-300"
                >
                   Talha <span className="text-[#3498db]">Ahmed</span>
                </button>
@@ -158,7 +158,7 @@ function NavBar() {
                      <button
                         key={item.id}
                         onClick={() => scrollToSection(item.section)}
-                        className="flex items-center gap-1 group text-white hover:text-[#3498db] transition-colors duration-300 font-medium"
+                        className="flex items-center gap-1 group text-[#2c3e50] hover:text-[#3498db] transition-colors duration-300 font-medium"
                      >
                         {item.icon}
                         <span className="group-hover:text-[#3498db] transition-colors duration-300">
