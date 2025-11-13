@@ -123,11 +123,11 @@ function ContactCTA() {
                         <a
                            key={index}
                            href={contact.link}
-                           className="group flex items-center gap-4 p-6 bg-white rounded-2xl hover:bg-gradient-to-r hover:from-[#3498DB] hover:to-[#2980B9] transition-all duration-500 border-2 border-gray-100 hover:border-[#3498DB] hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                           className="group flex items-center gap-4 p-6 bg-white hover:bg-gradient-to-r hover:from-[#3498DB] hover:to-[#2980B9] transition-all duration-500 border-2 border-gray-100 hover:border-[#3498DB] hover:-translate-y-1 shadow-lg hover:shadow-xl"
                            data-aos="fade-up"
                            data-aos-delay={index * 100}
                         >
-                           <div className="bg-[#2C3E50] p-4 rounded-xl text-white group-hover:bg-white group-hover:text-[#2C3E50] transition-colors duration-500">
+                           <div className="bg-[#2C3E50] p-4  text-white group-hover:bg-white group-hover:text-[#2C3E50] transition-colors duration-500">
                               {contact.icon}
                            </div>
                            <div>
@@ -145,7 +145,7 @@ function ContactCTA() {
 
                {/* Right Side - Contact Form */}
                <div
-                  className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-100"
+                  className="bg-white shadow-xl p-8 border-2 border-gray-100"
                   data-aos="fade-left"
                >
                   <div className="flex items-center gap-3 mb-6">
@@ -169,7 +169,7 @@ function ContactCTA() {
                            <input
                               type="text"
                               name="user_name"
-                              className="text-[#2c3e50] w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#3498DB] placeholder:text-gray-400 transition-colors duration-300"
+                              className="text-[#2c3e50] w-full px-4 py-3 border-2 border-gray-200  focus:outline-none focus:border-[#3498DB] placeholder:text-gray-400 transition-colors duration-300"
                               placeholder="Enter your name"
                               required
                            />
@@ -181,7 +181,7 @@ function ContactCTA() {
                            <input
                               type="email"
                               name="user_email"
-                              className="text-[#2c3e50] w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#3498DB] placeholder:text-gray-400 transition-colors duration-300"
+                              className="text-[#2c3e50] w-full px-4 py-3 border-2 border-gray-200  focus:outline-none focus:border-[#3498DB] placeholder:text-gray-400 transition-colors duration-300"
                               placeholder="your@company.com"
                               required
                            />
@@ -195,7 +195,7 @@ function ContactCTA() {
                         <input
                            type="text"
                            name="project_scope"
-                           className="text-[#2c3e50] w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#3498DB] placeholder:text-gray-400 transition-colors duration-300"
+                           className="text-[#2c3e50] w-full px-4 py-3 border-2 border-gray-200  focus:outline-none focus:border-[#3498DB] placeholder:text-gray-400 transition-colors duration-300"
                            placeholder="Describe your project requirements"
                            required
                         />
@@ -208,7 +208,7 @@ function ContactCTA() {
                         <textarea
                            name="project_details"
                            rows="5"
-                           className="text-[#2c3e50] w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#3498DB] placeholder:text-gray-400 transition-colors duration-300 resize-none"
+                           className="text-[#2c3e50] w-full px-4 py-3 border-2 border-gray-200 focus:outline-none focus:border-[#3498DB] placeholder:text-gray-400 transition-colors duration-300 resize-none"
                            placeholder="Tell me about your business goals and technical requirements..."
                            required
                         ></textarea>
@@ -216,7 +216,7 @@ function ContactCTA() {
 
                      <button
                         type="submit"
-                        className="w-full bg-gradient-to-r from-[#3498DB] to-[#2980B9] hover:from-[#2980B9] hover:to-[#3498DB] text-white py-4 rounded-xl font-semibold transition-all duration-500 transform hover:scale-105 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl"
+                        className="w-full bg-gradient-to-r from-[#3498DB] to-[#2980B9] hover:from-[#2980B9] hover:to-[#3498DB] text-white py-4 font-semibold transition-all duration-500  flex items-center justify-center gap-3 shadow-lg hover:shadow-xl"
                      >
                         <FaPaperPlane />
                         Discuss Project

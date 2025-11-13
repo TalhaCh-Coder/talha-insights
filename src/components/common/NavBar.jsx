@@ -134,7 +134,7 @@ function NavBar() {
                      className="flex w-full px-8"
                      passHref
                   >
-                     <button className="bg-[#3498db] w-full px-4 py-3 rounded-sm hover:bg-[#2980b9] transition-colors duration-300 cursor-pointer text-white font-semibold">
+                     <button className="bg-[#3498db] w-full px-4 py-3 hover:bg-[#2980b9] transition-colors duration-300 cursor-pointer text-white font-semibold">
                         Download CV
                      </button>
                   </Link>
@@ -174,7 +174,7 @@ function NavBar() {
                   download="Talha-Ahmed.pdf"
                   passHref
                >
-                  <button className="bg-[#3498db] flex items-center gap-2 px-6 py-3 rounded-sm hover:bg-[#2980b9] transition-colors duration-300 cursor-pointer text-white font-semibold">
+                  <button className="bg-[#3498db] flex items-center gap-2 px-6 py-3 hover:bg-[#2980b9] transition-colors duration-300 cursor-pointer text-white font-semibold">
                      <FaDownload className="mb-[1px]" /> Resume
                   </button>
                </Link>

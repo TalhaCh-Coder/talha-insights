@@ -86,7 +86,7 @@ function SkillsSection() {
                {skillsData.map((category, categoryIndex) => (
                   <div
                      key={categoryIndex}
-                     className="group bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-[#3498DB] hover:-translate-y-2"
+                     className="group bg-white p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-[#3498DB] hover:-translate-y-2"
                      data-aos="fade-up"
                      data-aos-delay={categoryIndex * 100}
                   >
@@ -103,7 +103,7 @@ function SkillsSection() {
                         {category.skills.map((skill, skillIndex) => (
                            <div
                               key={skillIndex}
-                              className="group/item flex items-center justify-between p-4 rounded-xl  hover:bg-[#2980B9] transition-all duration-300 border border-gray-200 hover:border-[#3498DB]"
+                              className="group/item flex items-center justify-between p-4   hover:bg-[#2980B9] transition-all duration-300 border border-gray-200 hover:border-[#3498DB]"
                            >
                               <span className="font-semibold text-[#2C3E50] group-hover/item:text-white transition-colors duration-300 text-sm md:text-base">
                                  {skill.name}
@@ -128,7 +128,7 @@ function SkillsSection() {
                ].map((stat, index) => (
                   <div
                      key={index}
-                     className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border-2 border-gray-100 hover:border-[#3498DB] hover:-translate-y-1"
+                     className="text-center p-6 bg-white  shadow-lg hover:shadow-xl transition-all duration-500 border-2 border-gray-100 hover:border-[#3498DB] hover:-translate-y-1"
                      data-aos="zoom-in"
                      data-aos-delay={index * 100 + 300}
                   >

@@ -87,7 +87,7 @@ function AboutSummary() {
 
                   {/* Stats */}
                   <div className="grid grid-cols-2 gap-6 pt-6">
-                     <div className="text-center bg-gray-50 p-4 rounded-lg">
+                     <div className="text-center bg-gray-50 p-4 ">
                         <div className="text-2xl md:text-3xl font-bold text-[#3498DB]">
                            50+
                         </div>
@@ -95,7 +95,7 @@ function AboutSummary() {
                            Solutions Delivered
                         </div>
                      </div>
-                     <div className="text-center bg-gray-50 p-4 rounded-lg">
+                     <div className="text-center bg-gray-50 p-4 ">
                         <div className="text-2xl md:text-3xl font-bold text-[#3498DB]">
                            100%
                         </div>
@@ -111,9 +111,9 @@ function AboutSummary() {
                   {aboutPoints.map((point, index) => (
                      <div
                         key={index}
-                        className="group flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-200 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:bg-[#3498DB]"
+                        className="group flex items-start gap-4 p-6 bg-white  border border-gray-200 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:bg-[#3498DB]"
                      >
-                        <div className="bg-[#2C3E50] p-3 rounded-lg text-white group-hover:bg-white group-hover:text-[#2C3E50] transition-all duration-500  flex-shrink-0">
+                        <div className="bg-[#2C3E50] p-3  text-white group-hover:bg-white group-hover:text-[#2C3E50] transition-all duration-500  flex-shrink-0">
                            {point.icon}
                         </div>
                         <div>

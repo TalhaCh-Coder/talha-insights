@@ -110,7 +110,7 @@ function ProjectsSection() {
                {projectsData.map((project, index) => (
                   <div
                      key={project.id}
-                     className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-[#3498DB] hover:-translate-y-2 overflow-hidden"
+                     className="group bg-white shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-[#3498DB] hover:-translate-y-2 overflow-hidden"
                      data-aos="fade-up"
                      data-aos-delay={index * 100}
                   >
@@ -197,7 +197,7 @@ function ProjectsSection() {
 
             {/* CTA Button */}
             <div className="text-center mt-12" data-aos="fade-up">
-               <button className="bg-gradient-to-r from-[#3498DB] to-[#2980B9] hover:from-[#2980B9] hover:to-[#3498DB] text-white px-10 py-4 rounded-xl font-semibold transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-xl">
+               <button className="bg-gradient-to-r from-[#3498DB] to-[#2980B9] hover:from-[#2980B9] hover:to-[#3498DB] text-white px-10 py-4 font-semibold transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-xl">
                   Explore All Solutions
                </button>
             </div>

@@ -59,7 +59,7 @@ function HomeHero() {
                               .getElementById("portfolio")
                               .scrollIntoView({ behavior: "smooth" })
                         }
-                        className="bg-[#3498db] ml-0 md:ml-2 px-8 py-3 md:py-4 inline-block hover:bg-[#2980b9] transition-all duration-300 transform hover:scale-105 rounded-lg text-white font-semibold shadow-lg hover:shadow-xl"
+                        className="bg-[#3498db] ml-0 md:ml-2 px-8 py-3 md:py-4 inline-block hover:bg-[#2980b9] transition-all duration-300 transform hover:scale-105  text-white font-semibold shadow-lg hover:shadow-xl"
                      >
                         Explore My Projects
                      </button>

@@ -84,7 +84,7 @@ function Footer() {
                            href={social.url}
                            target="_blank"
                            rel="noopener noreferrer"
-                           className="bg-[#2C3E50] hover:bg-[#3498db] p-4 rounded-xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+                           className="bg-[#2C3E50] hover:bg-[#3498db] p-4 transition-all duration-300 "
                            data-aos="zoom-in"
                            data-aos-delay={300 + index * 100}
                         >
@@ -105,7 +105,7 @@ function Footer() {
                         <a
                            key={contact.id}
                            href={contact.link}
-                           className="flex items-center gap-4 p-4 bg-[#2C3E50] rounded-xl hover:bg-[#3498db] transition-all duration-300 group"
+                           className="flex items-center gap-4 p-4 bg-[#2C3E50] hover:bg-[#3498db] transition-all duration-300 group"
                            data-aos="fade-up"
                            data-aos-delay={400 + index * 100}
                         >
